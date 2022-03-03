@@ -1,12 +1,26 @@
 import styled from "styled-components";
 
+//Div estilos para Index.tsx
 export const HomeDivs = styled.div`
+  position: relative;
   max-width: 1300px;
   height: 500px;
   margin: auto;
-  /* background-color: gray; */
+  display: flex;
+  flex-direction: row;
 `;
 
+//container para position
+
+export const TesteContainer = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  max-width: 1300px;
+`;
+
+//Estilos para div em
 export const DescriptionDivs = styled.div`
   width: 50%;
   p {
@@ -54,4 +68,27 @@ export const ButtonHome = styled.button`
   color: #ffffff;
   text-align: left;
   padding-left: 35px;
+`;
+
+//Estilos para div secundária
+
+export const PicturesDiv = styled.div`
+  width: 50%;
+  img {
+    width: 470px;
+    height: 565px;
+    margin-left: 150px;
+  }
+`;
+
+export const BallViolet = styled.div`
+  width: 1300px;
+  img {
+    position: relative;
+    background: transparent;
+    width: 1042px;
+    height: 1320px;
+    left: 559px;
+    top: 20px;
+  }
 `;
