@@ -7,6 +7,7 @@ export const ContainerHeader = styled.div`
   height: 130px;
   background-color: gray; //corfundo para testes
   margin-bottom: 10px;
+  background-color: #f2f2f2;
 `;
 
 export const Navbar = styled.div`

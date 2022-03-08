@@ -3,11 +3,13 @@ import styled from "styled-components";
 //Div estilos para Index.tsx
 export const HomeDivs = styled.div`
   position: relative;
-  max-width: 1300px;
+  width: 100%;
+  /* max-width: 1300px; */
   height: 500px;
   margin: auto;
+  justify-content: center;
   display: flex;
-  flex-direction: row;
+  background-color: #f2f2f2;
 `;
 
 //container para position
