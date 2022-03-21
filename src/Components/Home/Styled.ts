@@ -79,18 +79,24 @@ export const PicturesDiv = styled.div`
   img {
     width: 470px;
     height: 565px;
-    margin-left: 150px;
+    margin-left: 155px;
   }
 `;
 
 export const BallViolet = styled.div`
   width: 1300px;
   img {
-    position: relative;
+    /* position: relative;
     background: transparent;
     width: 1042px;
     height: 1320px;
     left: 559px;
-    top: 20px;
+    top: 20px; */
+    position: relative;
+    background: transparent;
+    width: 794px;
+    height: 1050px;
+    left: 807px;
+    top: -35px;
   }
 `;

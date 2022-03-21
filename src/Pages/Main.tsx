@@ -1,3 +1,4 @@
+import Compromisso from "../Components/Commitment/Compromisso";
 import Header from "../Components/Header/Header";
 import Home from "../Components/Home";
 
@@ -10,6 +11,7 @@ function Main() {
         <Header />
       </ContainerMain>
       <Home />
+      <Compromisso />
     </>
   );
 }
