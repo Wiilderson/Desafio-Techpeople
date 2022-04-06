@@ -46,6 +46,8 @@ export const TextCompromisse = styled.div`
 
 export const CardsCompromisse = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
   justify-content: space-between;
   margin: auto;
   width: 1120px;
@@ -108,48 +110,17 @@ export const Span2 = styled.span`
 export const Paragrf2 = styled.div`
   width: 331px;
 `;
-//------------------------------------------------------------------------------------------------
 
-// export const CardBloco2 = styled.div`
-//   width: 344px;
-//   height: 351px;
-//   background: #ffffff;
-//   box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
-//   border-radius: 15px;
-//   /* margin-top: 10px; */
+export const Span3 = styled.span`
+  img {
+    margin-left: -58px;
+    margin-bottom: 15px;
+  }
+`;
 
-//   h4 {
-//     margin-top: 30px;
-//     margin-left: 31px;
-//     font-family: "Roboto", sans-serif;
-//     font-weight: 700;
-//     font-size: 24px;
-//     line-height: 28px;
-//     letter-spacing: 0.444444px;
-//   }
-//   p {
-//     margin-top: 10px;
-//     margin-left: 31px;
-//     font-family: "Roboto", sans-serif;
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 28px;
-//     letter-spacing: 0.444444px;
-//     color: rgba(55, 71, 79, 0.7216);
-//   }
-// `;
-
-// export const Span2 = styled.span`
-//   img {
-//     margin-left: -62px;
-//     margin-bottom: 14px;
-//   }
-// `;
-
-// export const Img2 = styled.img`
-//   margin: 29px 0 0 31px;
-// `;
-
-// export const Paragrf2 = styled.div`
-//   width: 316px;
-// `;
+export const Span4 = styled.span`
+  img {
+    margin-left: -58px;
+    margin-bottom: 20px;
+  }
+`;
