@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+//Div criada para fazer divisão declinada na foto e fundo roxo
 export const Divsplit = styled.div`
   position: absolute;
   width: 56%;
@@ -10,6 +11,7 @@ export const Divsplit = styled.div`
   transform: rotate(-3deg) skew(-3deg);
 `;
 
+//container do componente
 export const Container = styled.div`
   position: absolute;
   width: 100%;
@@ -34,6 +36,7 @@ export const TextCompromisse = styled.div`
   }
 
   p {
+    margin-top: 30px;
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-style: normal;

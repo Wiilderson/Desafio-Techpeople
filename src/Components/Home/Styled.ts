@@ -13,7 +13,6 @@ export const HomeDivs = styled.div`
 `;
 
 //container para position
-
 export const TesteContainer = styled.div`
   position: absolute;
   display: flex;

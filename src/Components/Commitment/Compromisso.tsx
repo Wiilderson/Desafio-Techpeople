@@ -70,9 +70,9 @@ function Compromisso() {
           </CardBloco>
 
           <CardBloco>
-            <Img src={EscudoVerde} alt="escudo de fundo" />
+            <Img src={EscudoVerde} alt="escudo de fundo verde" />
             <Span2>
-              <img src={Check} alt="estrela central" />
+              <img src={Check} alt="check central" />
             </Span2>
             <h4>Avaliar o que faz sentido</h4>
 
@@ -86,9 +86,9 @@ function Compromisso() {
           </CardBloco>
 
           <CardBloco>
-            <Img src={BlueCircle} alt="escudo vermelho" />
+            <Img src={BlueCircle} alt="escudo azul" />
             <Span>
-              <img src={Catavento} alt="estrela central" />
+              <img src={Catavento} alt="catavento" />
             </Span>
             <h4>Liberdade na escolha</h4>
 
@@ -103,7 +103,7 @@ function Compromisso() {
           <CardBloco>
             <Img src={Circlered} alt="escudo de fundo red" />
             <Span3>
-              <img src={Cronometro} alt="escola chapeu" />
+              <img src={Cronometro} alt="cronometro" />
             </Span3>
             <h4>Nada de prazos irreais</h4>
 
@@ -116,9 +116,9 @@ function Compromisso() {
           </CardBloco>
 
           <CardBloco>
-            <Img src={CircleGreendark} alt="escudo de fundo" />
+            <Img src={CircleGreendark} alt="escudo de fundo verde escuro" />
             <Span4>
-              <img src={Maleta} alt="estrela central" />
+              <img src={Maleta} alt="maleta" />
             </Span4>
             <h4>Contra o apagão da TI</h4>
 
