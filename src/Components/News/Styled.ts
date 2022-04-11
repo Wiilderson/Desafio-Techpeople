@@ -38,7 +38,7 @@ export const TextNews = styled.div`
   }
 `;
 
-export const CardsNews = styled.div`
+export const CardsNewsContainer = styled.div`
   display: flex;
   /* flex-wrap: wrap; */
   /* gap: 40px; */
@@ -59,13 +59,25 @@ export const CardNews = styled.div`
 `;
 
 export const CardInfos = styled.div`
-  justify-content: space-around;
-  flex-wrap: wrap;
+  margin: 28px 0px 0px 27px;
+  width: 100%;
   display: flex;
   gap: 10px;
   align-items: center;
 
+  flex-wrap: wrap;
+
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 19px;
+    color: #656465;
+  }
+
   p {
+    margin: 15px 0px 0px 0px;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -73,4 +85,8 @@ export const CardInfos = styled.div`
     line-height: 26px;
     color: #656465;
   }
+`;
+
+export const Paragrf = styled.div`
+  width: 290px;
 `;
