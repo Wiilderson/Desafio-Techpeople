@@ -54,7 +54,6 @@ function News() {
           </CardNews>
         </CardsNewsContainer>
       </Container>
-      ;
     </>
   );
 }

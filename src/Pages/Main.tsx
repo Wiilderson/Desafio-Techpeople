@@ -1,3 +1,4 @@
+import Agenda from "../Components/Agenda/Agenda";
 import Compromisso from "../Components/Commitment/Compromisso";
 import Header from "../Components/Header/Header";
 import Home from "../Components/Home";
@@ -14,6 +15,7 @@ function Main() {
       <Home />
       <Compromisso />
       <News />
+      <Agenda />
     </>
   );
 }
