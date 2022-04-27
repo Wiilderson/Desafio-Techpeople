@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
   width: 100%;
   height: 804px;
   margin: auto;
@@ -39,11 +38,10 @@ export const TextAgenda = styled.div`
 
 export const CardsAgendaContainer = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
-  /* gap: 40px; */
   justify-content: space-between;
   margin: auto;
   width: 1127px;
+  /* width: 1400px; */
   background-color: green;
   height: 390px;
   margin-top: 30px;

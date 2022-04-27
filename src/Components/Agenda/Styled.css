@@ -1,0 +1,17 @@
+.rec.rec-arrow:enabled {
+    visibility: hidden;
+  }
+  
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+  }
+
+ .rec.rec-carousel {
+    display: flex; 
+    width: 114%;
+    height: 400px;
+ }
+
+ /* .rec.rec-swipable{
+    background-color: papayawhip;
+ } */
