@@ -42,7 +42,6 @@ export const CardsAgendaContainer = styled.div`
   margin: auto;
   width: 1127px;
   /* width: 1400px; */
-  background-color: green;
   height: 390px;
   margin-top: 30px;
 `;
@@ -50,7 +49,7 @@ export const CardAgenda = styled.figure`
   width: 540px;
   height: 308px;
   background: #ffffff;
-  box-shadow: 0px 0px 77px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 0px 30px rgb(0 0 0 / 3%);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -122,6 +121,7 @@ export const Paragrf = styled.div`
 export const HoursContent = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 481px;
   margin: 28px 0 0 29px;
   p {
@@ -144,3 +144,5 @@ export const HoursContent = styled.div`
     color: #373737;
   }
 `;
+
+export const Icons = styled.div``;
