@@ -1,5 +1,6 @@
 import Agenda from "../Components/Agenda/Agenda";
 import Compromisso from "../Components/Commitment/Compromisso";
+import Forms from "../Components/Formulario/Forms";
 import Header from "../Components/Header/Header";
 import Home from "../Components/Home";
 import News from "../Components/News/News";
@@ -16,6 +17,7 @@ function Main() {
       <Compromisso />
       <News />
       <Agenda />
+      <Forms />
     </>
   );
 }
