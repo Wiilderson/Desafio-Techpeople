@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const TextForms = styled.div`
   width: 1126px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 95px;
   h1 {
     font-family: "Roboto", sans-serif;
     font-style: normal;
@@ -34,11 +34,13 @@ export const TextForms = styled.div`
 export const FormsContainer = styled.div`
   width: 100%;
   display: flex;
-  margin: auto;
+  height: 157px;
+  /* margin-bottom: 110px; */
+  flex-direction: column;
+  align-items: center;
 
   form {
     gap: 10px;
-    margin: auto;
     width: 1126px;
     display: flex;
   }
@@ -47,17 +49,45 @@ export const FormsContainer = styled.div`
 export const Input = styled.input`
   width: 290px;
   height: 64px;
-  background: #ffffff;
-  border: 1px solid #dedede;
+  /* background: #ffffff; */
+  /* border: 1px solid #dedede; */
+  background: ${(props) => props.color};
+  border: 1px solid ${(props) => props.theme};
   box-sizing: border-box;
   border-radius: 8px;
-  padding: 10px;
+  padding: 20px;
 
   &:focus {
     outline: none;
-    background: #ffffff;
+    background: ${(props) => props.color};
     border: 2px solid #909090;
     box-sizing: border-box;
     border-radius: 8px;
   }
+`;
+
+export const InputButton = styled.button`
+  background: #717cff;
+  border-radius: 11px;
+  width: 262px;
+  height: 64px;
+  cursor: pointer;
+  border: 0 none;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 40px;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 35px;
+`;
+
+export const Alerta = styled.div`
+  width: 151px;
+  height: 21px;
+  align-self: center;
+  margin-top: 5px;
+  margin-left: 237px;
 `;

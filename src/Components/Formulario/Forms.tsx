@@ -1,7 +1,15 @@
-import { Container, FormsContainer, Input, TextForms } from "./Styled";
+import {
+  Alerta,
+  Container,
+  FormsContainer,
+  Input,
+  InputButton,
+  TextForms,
+} from "./Styled";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 interface FormInputs {
   fullName: string;
@@ -9,13 +17,15 @@ interface FormInputs {
   fone: number;
 }
 
-const phoneNumber = /\([1-9]{2}\) 9[1-9]\d{3}-\d{4}/;
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+// const phoneNumber = /\([1-9]{2}\) 9[1-9]\d{3}-\d{4}/;
 
 const formSchema = yup
   .object({
     fullName: yup.string().required(),
     email: yup.string().email().required(),
-    phone: yup.string().matches(phoneNumber),
+    fone: yup.string().matches(phoneRegExp, "Digite apenas números"),
   })
   .required();
 
@@ -39,14 +49,43 @@ function Forms() {
 
       <FormsContainer>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Input {...register("fullName")} placeholder="Nome completo" />
-          <p>{errors.fullName?.message}</p>
-
-          <input {...register("email")} placeholder="E-mail" />
-          <p>{errors.email?.message}</p>
-
-          <input type="submit" />
+          <Input
+            {...register("fullName")}
+            placeholder="Nome completo"
+            theme={errors.fullName?.type ? "#F49A9A" : "#DEDEDE"}
+            color={errors.fullName?.type ? "#F9ECEC" : "#FFFFFF"}
+          />
+          {/* 
+          <Input {...register("email")} placeholder="E-mail" />
+          <p>{errors.email?.type && <InputError />}</p> */}
+          <Input
+            {...register("email")}
+            placeholder="E-mail"
+            theme={errors.email?.type ? "#F49A9A" : "#DEDEDE"}
+            color={errors.email?.type ? "#F9ECEC" : "#FFFFFF"}
+          />
+          <Input
+            {...register("fone")}
+            placeholder="Telefon Celular"
+            theme={errors.fone?.type ? "#F49A9A" : "#DEDEDE"}
+            color={errors.fone?.type ? "#F9ECEC" : "#FFFFFF"}
+          />
+          <InputButton type="submit"> Cadastre-se</InputButton>
+          <AiOutlineArrowRight
+            size={23}
+            color="#37474F"
+            style={{
+              backgroundColor: "transparent",
+              // position: "absolute",
+              marginTop: "23px",
+              marginLeft: "-63px",
+              cursor: "pointer",
+            }}
+          />
         </form>
+        <Alerta>
+          <p>{errors.fone?.message}</p>
+        </Alerta>
       </FormsContainer>
     </Container>
   );
