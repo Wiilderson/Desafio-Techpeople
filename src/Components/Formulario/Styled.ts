@@ -91,3 +91,48 @@ export const Alerta = styled.div`
   margin-top: 5px;
   margin-left: 237px;
 `;
+
+// componente LOADING...
+
+export const LoadContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 379px; */
+  margin: auto;
+  background-color: #fafafa;
+  align-items: center;
+  img {
+    width: 64px;
+    height: 64px;
+  }
+  h1 {
+    margin-top: 8px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+  }
+`;
+
+// componente SUCCESS...
+
+export const SuccessContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  background-color: #fafafa;
+  align-items: center;
+
+  h1 {
+  }
+
+  p {
+  }
+
+  button {
+  }
+`;
