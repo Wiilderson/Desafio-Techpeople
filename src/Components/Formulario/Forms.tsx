@@ -42,69 +42,80 @@ function Forms() {
   });
 
   const [showLoader, setShowLoader] = useState(false);
+  // const [success, setSuccess] = useState(false);
+  const [showElement, setShowElement] = useState(true);
 
   function onSubmit(data: FormInputs) {
     setShowLoader(true);
+    setShowElement(false);
     console.log(data);
-    // setShowLoader(false);
+    setTimeout(() => {
+      setShowLoader(false);
+      // setSuccess(true);
+    }, 3000);
+
+    // return () => clearTimeout(timer);
   }
   return (
     <>
       <Container>
-        {!showLoader ? (
-          <>
-            <TextForms>
-              <h1>Preparado para fazer parte da nossa iniciativa?</h1>
+        {(() => {
+          if (showElement == true) {
+            return (
+              <>
+                <TextForms>
+                  <h1>Preparado para fazer parte da nossa iniciativa?</h1>
 
-              <p>
-                Preencha todos os campos para que possamos entrar em contato.
-              </p>
-            </TextForms>
-            <FormsContainer>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <Input
-                  {...register("fullName")}
-                  placeholder="Nome completo"
-                  theme={errors.fullName?.type ? "#F49A9A" : "#DEDEDE"}
-                  color={errors.fullName?.type ? "#F9ECEC" : "#FFFFFF"}
-                />
-                <Input
-                  {...register("email")}
-                  placeholder="E-mail"
-                  theme={errors.email?.type ? "#F49A9A" : "#DEDEDE"}
-                  color={errors.email?.type ? "#F9ECEC" : "#FFFFFF"}
-                />
-                <Input
-                  {...register("fone")}
-                  placeholder="Telefon Celular"
-                  theme={errors.fone?.type ? "#F49A9A" : "#DEDEDE"}
-                  color={errors.fone?.type ? "#F9ECEC" : "#FFFFFF"}
-                />
-                <InputButton type="submit">Cadastre-se</InputButton>
-                <AiOutlineArrowRight
-                  size={23}
-                  color="#37474F"
-                  style={{
-                    backgroundColor: "transparent",
-                    // position: "absolute",
-                    marginTop: "23px",
-                    marginLeft: "-63px",
-                    cursor: "pointer",
-                  }}
-                />
-              </form>
-              <Alerta>
-                <p>{errors.fone?.message}</p>
-              </Alerta>
-            </FormsContainer>
-          </>
-        ) : (
-          <Loading />
-        )}
-
-        {/* {<Loading /> ? <Success /> : <Forms />} */}
-
-        {/* {showLoader && <Loading />} */}
+                  <p>
+                    Preencha todos os campos para que possamos entrar em
+                    contato.
+                  </p>
+                </TextForms>
+                <FormsContainer>
+                  <form onSubmit={handleSubmit(onSubmit)}>
+                    <Input
+                      {...register("fullName")}
+                      placeholder="Nome completo"
+                      theme={errors.fullName?.type ? "#F49A9A" : "#DEDEDE"}
+                      color={errors.fullName?.type ? "#F9ECEC" : "#FFFFFF"}
+                    />
+                    <Input
+                      {...register("email")}
+                      placeholder="E-mail"
+                      theme={errors.email?.type ? "#F49A9A" : "#DEDEDE"}
+                      color={errors.email?.type ? "#F9ECEC" : "#FFFFFF"}
+                    />
+                    <Input
+                      {...register("fone")}
+                      placeholder="Telefon Celular"
+                      theme={errors.fone?.type ? "#F49A9A" : "#DEDEDE"}
+                      color={errors.fone?.type ? "#F9ECEC" : "#FFFFFF"}
+                    />
+                    <InputButton type="submit">Cadastre-se</InputButton>
+                    <AiOutlineArrowRight
+                      size={23}
+                      color="#37474F"
+                      style={{
+                        backgroundColor: "transparent",
+                        // position: "absolute",
+                        marginTop: "23px",
+                        marginLeft: "-63px",
+                        cursor: "pointer",
+                      }}
+                    />
+                  </form>
+                  <Alerta>
+                    <p>{errors.fone?.message}</p>
+                  </Alerta>
+                </FormsContainer>
+              </>
+            );
+          } else if (showLoader == true && showElement == false) {
+            return <Loading />;
+          } else {
+            return <Success />;
+          }
+        })()}
       </Container>
     </>
   );
