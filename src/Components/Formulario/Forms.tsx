@@ -4,15 +4,15 @@ import {
   FormsContainer,
   Input,
   InputButton,
+  SuccessContainer,
   TextForms,
 } from "./Styled";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "./Loading";
-import Success from "./Success";
 
 interface FormInputs {
   fullName: string;
@@ -36,7 +36,8 @@ function Forms() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    resetField,
+    formState: { errors, isSubmitSuccessful },
   } = useForm<FormInputs>({
     resolver: yupResolver(formSchema),
   });
@@ -45,13 +46,17 @@ function Forms() {
   // const [success, setSuccess] = useState(false);
   const [showElement, setShowElement] = useState(true);
 
+  const handleClick = () => resetField("fullName");
+
   function onSubmit(data: FormInputs) {
     setShowLoader(true);
     setShowElement(false);
     console.log(data);
     setTimeout(() => {
       setShowLoader(false);
-      // setSuccess(true);
+      resetField("fullName");
+      resetField("email");
+      resetField("fone");
     }, 3000);
 
     // return () => clearTimeout(timer);
@@ -91,7 +96,7 @@ function Forms() {
                       theme={errors.fone?.type ? "#F49A9A" : "#DEDEDE"}
                       color={errors.fone?.type ? "#F9ECEC" : "#FFFFFF"}
                     />
-                    <InputButton type="submit">Cadastre-se</InputButton>
+                    <InputButton>Cadastre-se</InputButton>
                     <AiOutlineArrowRight
                       size={23}
                       color="#37474F"
@@ -113,7 +118,21 @@ function Forms() {
           } else if (showLoader == true && showElement == false) {
             return <Loading />;
           } else {
-            return <Success />;
+            return (
+              <>
+                <SuccessContainer>
+                  <h1>Sucesso!</h1>
+                  <p>Logo iremos responder seu contato.</p>
+                  <button
+                    onClick={() => {
+                      setShowElement(true);
+                    }}
+                  >
+                    Fechar
+                  </button>
+                </SuccessContainer>
+              </>
+            );
           }
         })()}
       </Container>

@@ -128,11 +128,37 @@ export const SuccessContainer = styled.div`
   align-items: center;
 
   h1 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 43px;
+    color: #252525;
   }
 
   p {
+    margin-top: 15px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(55, 71, 79, 0.72);
   }
 
   button {
+    margin-top: 30px;
+    width: 169px;
+    height: 48px;
+    background: #717cff;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    border: 0 none;
   }
 `;
