@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
   width: 100%;
   height: 851px;
   margin: auto;
@@ -40,12 +39,9 @@ export const TextNews = styled.div`
 
 export const CardsNewsContainer = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
-  /* gap: 40px; */
   justify-content: space-between;
   margin: auto;
   width: 1120px;
-  background-color: green;
   height: 405px;
   margin-top: 30px;
 `;

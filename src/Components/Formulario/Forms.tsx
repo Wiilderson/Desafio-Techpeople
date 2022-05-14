@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Loading from "./Loading";
 
 interface FormInputs {
@@ -43,10 +43,7 @@ function Forms() {
   });
 
   const [showLoader, setShowLoader] = useState(false);
-  // const [success, setSuccess] = useState(false);
   const [showElement, setShowElement] = useState(true);
-
-  const handleClick = () => resetField("fullName");
 
   function onSubmit(data: FormInputs) {
     setShowLoader(true);
@@ -58,8 +55,6 @@ function Forms() {
       resetField("email");
       resetField("fone");
     }, 3000);
-
-    // return () => clearTimeout(timer);
   }
   return (
     <>

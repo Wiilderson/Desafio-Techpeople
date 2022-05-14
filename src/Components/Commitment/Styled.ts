@@ -54,7 +54,7 @@ export const CardsCompromisse = styled.div`
   justify-content: space-between;
   margin: auto;
   width: 1120px;
-  background-color: green;
+  /* background-color: green; */
   height: 755px;
   margin-top: 90px;
 `;

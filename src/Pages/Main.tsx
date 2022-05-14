@@ -4,6 +4,7 @@ import Forms from "../Components/Formulario/Forms";
 import Header from "../Components/Header/Header";
 import Home from "../Components/Home";
 import News from "../Components/News/News";
+import Footer from "../Components/Rodapé/Footer";
 
 import { ContainerMain } from "./Styled";
 
@@ -18,6 +19,7 @@ function Main() {
       <News />
       <Agenda />
       <Forms />
+      <Footer />
     </>
   );
 }
