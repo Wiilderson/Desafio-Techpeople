@@ -30,7 +30,7 @@ function Compromisso() {
     <>
       <Container>
         <Divsplit></Divsplit>
-        <TextCompromisse>
+        <TextCompromisse id="compromisso">
           <h1>Nosso Comprimisso</h1>
           <p>
             Temos um compromisso de fazer desafios e gerar avaliações precisas

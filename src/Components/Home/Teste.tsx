@@ -5,6 +5,7 @@ import {
   PicturesDiv,
   TesteContainer,
 } from "./Styled";
+import { Link } from "react-scroll";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import WomanStudant from "../../Assets/womanStudant.png";
 
@@ -25,18 +26,26 @@ function Teste() {
           </span>
         </DivSpan>
 
-        <ButtonHome>Participar</ButtonHome>
-        <AiOutlineArrowDown
-          size={23}
-          color="#37474F"
-          style={{
-            backgroundColor: "transparent",
-            position: "absolute",
-            marginTop: "52px",
-            marginLeft: "-41px",
-            cursor: "pointer",
-          }}
-        />
+        <Link
+          to="compromisso"
+          spy={true}
+          smooth={true}
+          offset={-75}
+          duration={500}
+        >
+          <ButtonHome>Participar</ButtonHome>
+          <AiOutlineArrowDown
+            size={23}
+            color="#37474F"
+            style={{
+              backgroundColor: "transparent",
+              position: "absolute",
+              marginTop: "52px",
+              marginLeft: "-41px",
+              cursor: "pointer",
+            }}
+          />
+        </Link>
       </DescriptionDivs>
       <PicturesDiv>
         <img src={WomanStudant} alt="mulher estudante" />

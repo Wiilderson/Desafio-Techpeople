@@ -15,8 +15,6 @@ import Carousel from "react-elastic-carousel";
 import "./Styled.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { AiOutlineClockCircle } from "react-icons/ai";
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
 
 function Agenda() {
   const breakPoints = [
@@ -28,7 +26,7 @@ function Agenda() {
 
   return (
     <Container>
-      <TextAgenda>
+      <TextAgenda id="agenda">
         <h1>Anota ai nossa agenda</h1>
         <p>
           Temos um monte de eventos que estamos criando no nosso servidor. Fique

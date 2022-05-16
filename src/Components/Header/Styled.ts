@@ -22,6 +22,7 @@ export const Navbar = styled.div`
     display: flex;
     list-style: none;
     li {
+      cursor: pointer;
       font-family: "Roboto", sans-serif;
       font-style: normal;
       font-weight: 500;

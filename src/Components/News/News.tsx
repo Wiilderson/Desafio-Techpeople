@@ -15,7 +15,7 @@ function News() {
   return (
     <>
       <Container>
-        <TextNews>
+        <TextNews id="noticias">
           <h1>Notícias</h1>
           <p>
             Listamos abaixo algumas notícias de tecnologia que nos motivam a
