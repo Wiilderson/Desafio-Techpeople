@@ -125,6 +125,7 @@ export const HoursContent = styled.div`
   width: 481px;
   margin: 28px 0 0 29px;
   p {
+    cursor: pointer;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 700;
